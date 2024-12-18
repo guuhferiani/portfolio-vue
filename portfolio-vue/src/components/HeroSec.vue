@@ -21,7 +21,7 @@ export default {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("../assets/img/hero-bg.png") top center;
+    background: url("../assets/img/hero-bg.webp") top center;
     background-size: cover;
 }
 
