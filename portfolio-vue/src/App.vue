@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <HeaderSec />
+    <HeroSec />
+    <SobreSec />
+    <FeitosSec/>
+
 
 
   </div>
@@ -8,6 +12,9 @@
 
 <script>
 import HeaderSec from './components/HeaderSec.vue';
+import HeroSec from './components/HeroSec.vue';
+import SobreSec from './components/SobreSec.vue';
+import FeitosSec from './components/FeitosSec.vue';
 
 
 
@@ -15,31 +22,12 @@ export default {
   name: 'App',
   components: {
     HeaderSec,
+    HeroSec,
+    SobreSec,
+    FeitosSec,
 
   }
 };
 </script>
 
-<style scoped>
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #272829;
-}
-
-a {
-  color: #149ddd;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #37b3ed;
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-}
-
-/* Outras regras globais... */
-
-</style>
+<style scoped> </style>
