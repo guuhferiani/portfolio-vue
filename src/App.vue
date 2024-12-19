@@ -3,7 +3,7 @@
     <HeaderSec />
     <HeroSec />
     <SobreSec />
-    <Habilidades />
+    <MyHabilidades />
 
 </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 import HeaderSec from './components/HeaderSec.vue';
 import HeroSec from './components/HeroSec.vue';
-import Habilidades from './components/Habilidades.vue';
+import Habilidades from './components/MyHabilidades.vue';
 import SobreSec from './components/SobreSec.vue';
 
 
@@ -21,7 +21,7 @@ export default {
     HeaderSec,
     HeroSec,
     SobreSec,
-    Habilidades,
+    MyHabilidades,
 
 
   }
