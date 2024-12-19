@@ -1,53 +1,32 @@
 <template>
   <section id="skills" class="skills section-bg">
     <div class="container">
-
       <div class="section-title">
         <h2>Minhas Habilidades</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Veja minhas habilidades abaixo e observe o progresso dinâmico!</p>
       </div>
 
       <div class="row skills-content">
-
-        <!-- Primeira coluna de habilidades -->
-        <div class="col-lg-6" data-aos="fade-up">
-          <div v-for="(skill, index) in skills.slice(0, 3)" :key="index" class="progress">
-            <span class="skill">{{ skill.name }} <i class="val">{{ skill.value }}%</i></span>
+        <div class="col-lg-6" v-for="(skill, index) in skills" :key="index">
+          <div class="progress">
+            <span class="skill">{{ skill.name }} <i class="val">{{ skill.currentValue }}%</i></span>
             <div class="progress-bar-wrap">
               <div
                 class="progress-bar"
+                :style="{ width: skill.currentValue + '%' }"
                 role="progressbar"
-                :aria-valuenow="skill.value"
+                :aria-valuenow="skill.currentValue"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                :style="{ width: skill.value + '%' }"
               ></div>
             </div>
           </div>
         </div>
-
-        <!-- Segunda coluna de habilidades -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div v-for="(skill, index) in skills.slice(3)" :key="index" class="progress">
-            <span class="skill">{{ skill.name }} <i class="val">{{ skill.value }}%</i></span>
-            <div class="progress-bar-wrap">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                :aria-valuenow="skill.value"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                :style="{ width: skill.value + '%' }"
-              ></div>
-            </div>
-          </div>
-        </div>
-
       </div>
-
     </div>
   </section>
 </template>
+
 
 <script>
 export default {
@@ -55,17 +34,34 @@ export default {
   data() {
     return {
       skills: [
-        { name: 'HTML', value: 100 },
-        { name: 'VueJs', value: 70 },
-        { name: 'CSS', value: 90 },
-        { name: 'JavaScript', value: 70 },
-        { name: 'Illustrator', value: 90 },
-        { name: 'Photoshop', value: 90 }
+        { name: 'HTML', maxValue: 100, currentValue: 0 },
+        { name: 'CSS', maxValue: 90, currentValue: 0 },
+        { name: 'JavaScript', maxValue: 75, currentValue: 0 },
+        { name: 'PHP', maxValue: 80, currentValue: 0 },
+        { name: 'WordPress', maxValue: 90, currentValue: 0 },
+        { name: 'Photoshop', maxValue: 55, currentValue: 0 }
       ]
     };
+  },
+  mounted() {
+    this.animateSkills();
+  },
+  methods: {
+    animateSkills() {
+      this.skills.forEach(skill => {
+        const interval = setInterval(() => {
+          if (skill.currentValue < skill.maxValue) {
+            skill.currentValue++;
+          } else {
+            clearInterval(interval);
+          }
+        }, 20); // Aumente ou diminua o tempo para ajustar a velocidade
+      });
+    }
   }
 };
 </script>
+
 
 
 
