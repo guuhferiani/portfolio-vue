@@ -95,6 +95,7 @@ export default {
 
 .about {
     margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 .about .content h3 {
