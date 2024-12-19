@@ -18,8 +18,8 @@ export default {
         // Configurações para Typed.js
         const options = {
             strings: ["Instrutor", "Developer", "Freelancer"], // Textos que serão digitados
-            typeSpeed: 150, // Velocidade da digitação
-            backSpeed: 150, // Velocidade ao apagar o texto
+            typeSpeed: 50, // Velocidade da digitação
+            backSpeed: 50, // Velocidade ao apagar o texto
             loop: true, // Repetir indefinidamente
         };
 
