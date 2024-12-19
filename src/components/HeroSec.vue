@@ -3,18 +3,37 @@
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
         <div class="hero-container" data-aos="fade-in">
             <h1>Gu Feriani</h1>
-            <p>Sou <span class="typed" data-typed-items="Instrutor, Developer, Freelancer"></span></p>
+            <p>Sou <span ref="typed"></span></p>
         </div>
     </section><!-- End Hero -->
 
 </template>
 
 <script>
+import Typed from "typed.js"; // Importando a biblioteca Typed.js
 
 export default {
-    name: 'HeroSec',
-};
+    name: 'HeroSec', // Nome do componente
+    mounted() {
+        // Configurações para Typed.js
+        const options = {
+            strings: ["Instrutor", "Developer", "Freelancer"], // Textos que serão digitados
+            typeSpeed: 150, // Velocidade da digitação
+            backSpeed: 150, // Velocidade ao apagar o texto
+            loop: true, // Repetir indefinidamente
+        };
 
+        // Inicializando o Typed.js com a referência do elemento no template
+        this.typed = new Typed(this.$refs.typed, options);
+    },
+
+    beforeUnmount() {
+        // Destruir a instância do Typed.js quando o componente for desmontado
+        if (this.typed) {
+            this.typed.destroy();
+        }
+    },
+};
 </script>
 
 <style scoped>
