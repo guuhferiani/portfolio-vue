@@ -3,8 +3,6 @@
     <HeaderSec />
     <HeroSec />
     <SobreSec />
-    <FeitosSec/>
-
 
 
   </div>
@@ -14,7 +12,6 @@
 import HeaderSec from './components/HeaderSec.vue';
 import HeroSec from './components/HeroSec.vue';
 import SobreSec from './components/SobreSec.vue';
-import FeitosSec from './components/FeitosSec.vue';
 
 
 
@@ -24,7 +21,6 @@ export default {
     HeaderSec,
     HeroSec,
     SobreSec,
-    FeitosSec,
 
   }
 };
