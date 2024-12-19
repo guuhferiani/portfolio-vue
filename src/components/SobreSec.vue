@@ -94,7 +94,7 @@ export default {
   --------------------------------------------------------------*/
 
 .about {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .about .content h3 {
