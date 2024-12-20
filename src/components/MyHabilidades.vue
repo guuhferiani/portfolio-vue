@@ -2,7 +2,7 @@
   <section id="skills" class="skills section-bg">
     <div class="container">
       <div class="section-title">
-        <h2>Minhas Habilidades</h2>
+        <h2>Habilidades</h2>
         <p>Veja minhas habilidades abaixo e observe o progresso dinâmico!</p>
       </div>
 
