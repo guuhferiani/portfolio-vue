@@ -1,8 +1,7 @@
 <template>
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-  <header id="header">
+  <i class="bi mobile-nav-toggle d-xl-none" :class="isMenuActive ? 'bi-x' : 'bi-list'" @click="toggleMenu"></i>
+  <header :class="{ 'mobile-nav-active': isMenuActive }" id="header">
     <div class="d-flex flex-column">
-
       <div class="profile">
         <img :src="perfilImage" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Gustavo Feriani</a></h1>
@@ -13,7 +12,6 @@
           <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
-
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
@@ -24,60 +22,70 @@
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Serviços</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contato</span></a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 </template>
 
+
 <script>
-import perfil from '@/assets/img/perfil.jpeg'
+import perfil from '@/assets/img/perfil.jpeg';
 
 export default {
   name: 'HeaderSec',
-
   data() {
     return {
-      perfilImage: perfil
+      perfilImage: perfil,
+      isMenuActive: false, // Estado para controlar o menu
     };
-  }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuActive = !this.isMenuActive; // Alterna entre aberto/fechado
+    },
+  },
 };
 </script>
 
+
+
 <style scoped>
 
+@media (max-width: 1199px) {
+  #header {
+    left: -300px; /* Oculta o menu por padrão */
+    transition: all 0.5s ease-in-out;
+  }
 
-/*--------------------------------------------------------------
-  # Back to top button
-  --------------------------------------------------------------*/
-  .back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 996;
-    background: #149ddd;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    transition: all 0.4s;
+  #header.mobile-nav-active {
+    left: 0; /* Exibe o menu quando ativo */
+  }
 }
 
-.back-to-top i {
-    font-size: 28px;
-    color: #fff;
-    line-height: 0;
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 10000; /* Garante que esteja acima de outros elementos */
+  font-size: 24px;
+  background: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-.back-to-top:hover {
-    background: #2eafec;
-    color: #fff;
+.mobile-nav-active {
+  overflow: hidden; /* Evita scroll ao ativar o menu */
 }
 
-.back-to-top.active {
-    visibility: visible;
-    opacity: 1;
-}
+
 
 /*--------------------------------------------------------------
 # Header
@@ -141,25 +149,23 @@ export default {
 }
 
 #main {
-    margin-left: 300px;
+  margin-left: 300px;
 }
 
-
-
 @media (max-width: 1199px) {
-    #header {
-        left: -300px;
-    }
+  #header {
+    left: -300px;
+  }
 
-    #main {
-        margin-left: 0;
-    }
+  #main {
+    margin-left: 0;
+  }
 
-    .container,
-    .container-fluid {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -167,82 +173,81 @@ export default {
   --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-    padding: 30px 0 0 0;
+  padding: 30px 0 0 0;
 }
 
 .nav-menu * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 .nav-menu>ul>li {
-    position: relative;
-    white-space: nowrap;
+  position: relative;
+  white-space: nowrap;
 }
 
 .nav-menu a,
 .nav-menu a:focus {
-    display: flex;
-    align-items: center;
-    color: #a8a9b4;
-    padding: 12px 15px;
-    margin-bottom: 8px;
-    transition: 0.3s;
-    font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
 }
 
 .nav-menu a i,
 .nav-menu a:focus i {
-    font-size: 24px;
-    padding-right: 8px;
-    color: #6f7180;
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
 }
 
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-    color: #149ddd;
+  color: #149ddd;
 }
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 9998;
-    border: 0;
-    font-size: 24px;
-    transition: all 0.4s;
-    outline: none !important;
-    background-color: #149ddd;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-    border-radius: 50px;
-    cursor: pointer;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .mobile-nav-active {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .mobile-nav-active #header {
-    left: 0;
+  left: 0;
 }
-
 </style>
