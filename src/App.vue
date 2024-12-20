@@ -11,8 +11,8 @@
 <script>
 import HeaderSec from './components/HeaderSec.vue';
 import HeroSec from './components/HeroSec.vue';
-import MyHabilidades from './components/MyHabilidades.vue';
 import SobreSec from './components/SobreSec.vue';
+import MyHabilidades from './components/MyHabilidades.vue';
 
 
 export default {
