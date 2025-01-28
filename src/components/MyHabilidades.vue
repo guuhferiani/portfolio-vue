@@ -35,9 +35,9 @@ export default {
     return {
       skills: [
         { name: 'HTML', maxValue: 100, currentValue: 0 },
-        { name: 'VueJS', maxValue: 75, currentValue: 0 },
+        { name: 'VueJS', maxValue: 65, currentValue: 0 },
         { name: 'CSS', maxValue: 90, currentValue: 0 },
-        { name: 'JavaScript', maxValue: 75, currentValue: 0 },
+        { name: 'JavaScript', maxValue: 65, currentValue: 0 },
         { name: 'Illustrator', maxValue: 90, currentValue: 0 },
         { name: 'Photoshop', maxValue: 90, currentValue: 0 }
       ]

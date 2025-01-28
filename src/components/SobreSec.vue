@@ -27,37 +27,33 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Data de Nascimento:</strong> <span>1 May
                                             1995</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong>
                                         <span>www.example.com</span>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Telefone/Whastapp:</strong> <span>+123 456
                                             7890</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York,
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>New York,
                                             USA</span></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Idade:</strong> <span>30</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Formação:</strong> <span>Master</span>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
                                         <span>email@example.com</span>
                                     </li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                                        <span>Available</span>
+                                        <span>Disponível</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <p>
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt
-                            adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus
-                            itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
-                            culpa magni laudantium dolores.
+                            Sou um entusiasta das novas tecnologias e redes sociais, com foco em desenvolver projetos que gerem impacto, como sites interativos e aplicativos. Sempre busco aprender mais sobre desenvolvimento, e estou em constante evolução para ser referência no design e no desenvolvimento digital.
                         </p>
                     </div>
                 </div>
