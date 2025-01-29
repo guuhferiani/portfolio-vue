@@ -4,6 +4,7 @@
     <HeroSec />
     <SobreSec />
     <MyHabilidades />
+    <MyResume />
 
 </div>
 </template>
@@ -13,6 +14,7 @@ import HeaderSec from './components/HeaderSec.vue';
 import HeroSec from './components/HeroSec.vue';
 import SobreSec from './components/SobreSec.vue';
 import MyHabilidades from './components/MyHabilidades.vue';
+import MyResume from './components/MyResume.vue';
 
 
 export default {
@@ -22,6 +24,7 @@ export default {
     HeroSec,
     SobreSec,
     MyHabilidades,
+    MyResume,
 
 
   }
